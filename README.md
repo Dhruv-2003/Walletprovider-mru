@@ -2,7 +2,7 @@
 
 ## Overview
 
-This guide provides step-by-step instructions for integrating Oracle services with Stackr Micro Rollups (MRU) using a bridge contract. This setup allows you to feed external price data into the rollup, enabling state transitions based on live data from Chainlink, Chronicle, or Pyth.
+This guide walks you through the process of integrating popular wallet providers with Stackr Micro Rollups (MRU). By following these steps, you'll enable users to interact with the rollup using their preferred wallet provider.
 
 ## Prerequisites
 
