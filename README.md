@@ -2,26 +2,23 @@
 
 ## Overview
 
-This guide provides basic instructions for integrating Oracle services with Stackr Micro Rollups (MRU) using a bridge contract. This setup allows you to feed external price data into the rollup, enabling state transitions based on live data from Chainlink, Chronicle, or Pyth.
+This guide provides basic instructions for integrating This guide walks you through the process of integrating popular wallet providers with Stackr Micro Rollups (MRU). By following these steps, you'll enable users to interact with the rollup using their preferred wallet provider such as social login, metamask, coinbase & much more.
 
-## What are Oracles
+## What are Wallet providers ?
 
-Oracles are external data sources that provide real-world information to blockchain networks. They act as a bridge between off-chain data and on-chain smart contracts, allowing contracts to execute based on external events or information.
+Wallet providers like Web3Auth, Privy, and Dynamic offer simplified authentication and onboarding solutions for Web3 applications. They combine traditional login methods (email, social media) with crypto-native options, making it easier for both mainstream and crypto-savvy users to access decentralized apps. These providers aim to reduce friction in user onboarding while maintaining security and offering developers flexible tools for implementation.
 
-There are several type of data feeds offered by oracles like Price Feeds, Proof of reserve Feeds, Entropy, etc. from the following oracle networks -
-
-- [**Chainlink**](https://chain.link/)
-- [**Pyth**](https://www.pyth.network/)
-- [**Chronicle**](https://chroniclelabs.org/)
-
+- [**Dynamic**](https://dynamic.xyz/)
+- [**Privy**](https://www.privy.io/)
+- [**Web3Auth**](https://web3auth.io/)
 
 ## Prerequisites
 
 Before you begin this tutorial, please ensure you go through the following:
 
 - Basic understanding of the Stackr Micro rollup framework: [Zero to One](/build/zero-to-one/getting-started)
-- Familiarity with Solidity and smart contract deployment
-- Knowledge & access to the preferred oracle service: [What are Blockchain Oracle](https://chain.link/education/blockchain-oracles)
+- Familiarity with frontend development (React, Vue, etc.)
+- Installed dependencies for interacting with the Stackr MRU and the chosen wallet providers.
 
 ## How to build ?
 
@@ -146,7 +143,7 @@ const payload = {
 };
 ```
 
-2. Get User’s Signature: Use the wallet provider to get the user’s signature over the action. Wallet connect from viem linked to wallet provider instance is being used to sign
+2. Get User’s Signature: Use the wallet provider to get the user’s signature over the action. WalletClient from viem linked to wallet provider instance is being used to sign. In case, you are using other SDKs, refer to the wallet provider documentation guides for retrieving the signer.
 
 ```typescript
  const signature = await walletClient.signTypedData({
