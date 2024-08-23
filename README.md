@@ -2,14 +2,26 @@
 
 ## Overview
 
-This guide walks you through the process of integrating popular wallet providers with Stackr Micro Rollups (MRU). By following these steps, you'll enable users to interact with the rollup using their preferred wallet provider.
+This guide provides basic instructions for integrating Oracle services with Stackr Micro Rollups (MRU) using a bridge contract. This setup allows you to feed external price data into the rollup, enabling state transitions based on live data from Chainlink, Chronicle, or Pyth.
+
+## What are Oracles
+
+Oracles are external data sources that provide real-world information to blockchain networks. They act as a bridge between off-chain data and on-chain smart contracts, allowing contracts to execute based on external events or information.
+
+There are several type of data feeds offered by oracles like Price Feeds, Proof of reserve Feeds, Entropy, etc. from the following oracle networks -
+
+- [**Chainlink**](https://chain.link/)
+- [**Pyth**](https://www.pyth.network/)
+- [**Chronicle**](https://chroniclelabs.org/)
+
 
 ## Prerequisites
 
-- Basic understanding of Stackr Micro Rollups.
-- Familiarity with frontend development (React, Vue, etc.).
-- Installed dependencies for interacting with the Stackr MRU and the chosen wallet providers.
+Before you begin this tutorial, please ensure you go through the following:
 
+- Basic understanding of the Stackr Micro rollup framework: [Zero to One](/build/zero-to-one/getting-started)
+- Familiarity with Solidity and smart contract deployment
+- Knowledge & access to the preferred oracle service: [What are Blockchain Oracle](https://chain.link/education/blockchain-oracles)
 
 ## How to build ?
 
